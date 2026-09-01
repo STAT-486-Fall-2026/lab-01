@@ -32,9 +32,9 @@ git config --global user.email "you@example.com"
 
 ## Set up your submission repository
 
-### 1. Fork the starter repository
+### 1. Create your private submission repository
 
-Fork [`STAT-486-Fall-2026/lab-01`](https://github.com/STAT-486-Fall-2026/lab-01) to your **personal GitHub account**. In the fork dialog, name your repository:
+On [`STAT-486-Fall-2026/lab-01`](https://github.com/STAT-486-Fall-2026/lab-01), select **Use this template** and then **Create a new repository**. Set the owner to the `STAT-486-Fall-2026-Labs` organization, name the repository:
 
 ```text
 lab-01-<netid>
@@ -42,20 +42,22 @@ lab-01-<netid>
 
 For example, a student whose NetID is `jdoe42` must create `lab-01-jdoe42`. Use your institutional NetID even if it differs from your GitHub username. This convention will be used throughout the course.
 
-### 2. Clone your fork and inspect the repository
+Make the repository **private**, then create it. Do not fork the starter repository.
 
-Copy the HTTPS URL for **your fork**, then run the following commands in a terminal (one at a time might be easier to see what each command does!). Replace the placeholders with your GitHub username and NetID.
+### 2. Clone your repository and inspect it
+
+Copy the HTTPS URL for **your repository**, then run the following commands in a terminal (one at a time might be easier to see what each command does!). Replace the NetID placeholder.
 
 ```bash
-git clone https://github.com/<github-username>/lab-01-<netid>.git
+git clone https://github.com/STAT-486-Fall-2026-Labs/lab-01-<netid>.git
 cd lab-01-<netid>
 git remote -v
 git status
 ```
 
-`origin` should point to **your** GitHub repository, and `git status` should report a clean working tree.
+`origin` should point to your repository in the `STAT-486-Fall-2026-Labs` organization, and `git status` should report a clean working tree.
 
-> **Do not run `git init`.** Cloning your fork has already created the Git repository. In this lab you will practice navigating, inspecting, committing, and pushing that repository.
+> **Do not run `git init`.** Cloning your repository has already created the Git repository. In this lab you will practice navigating, inspecting, committing, and pushing that repository.
 
 ### 3. Create and inspect a uv project
 
@@ -134,7 +136,7 @@ The final `git status` should report a clean working tree. Never commit `.venv/`
 
 Before submitting, confirm all of the following:
 
-- `git remote -v` shows your personal fork as `origin`.
+- `git remote -v` shows your repository in `STAT-486-Fall-2026-Labs` as `origin`.
 - `pyproject.toml` lists `numpy`, `pandas`, and `matplotlib`; `ipykernel` is recorded as a development dependency.
 - `uv.lock` is committed, while `.venv/` is not.
 - `lab-01.ipynb` runs from top to bottom with the repository `.venv` kernel.
@@ -143,10 +145,10 @@ Before submitting, confirm all of the following:
 
 ## Submission
 
-Paste the root URL of your fork into the Canvas Lab 01 submission textbox:
+Paste the root URL of your repository into the Canvas Lab 01 submission textbox:
 
 ```text
-https://github.com/<github-username>/lab-01-<netid>
+https://github.com/STAT-486-Fall-2026-Labs/lab-01-<netid>
 ```
 
 Submit the repository URL, not the course starter URL, a notebook-view URL, a clone URL ending in `.git`, or a local file path. Do not open a pull request and do not upload the notebook file to Canvas.
